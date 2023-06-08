@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+
+         body {
+				background-color: #f5f5f5;
+				font-family: Arial, sans-serif;
+			}
+			form {
+				max-width: 500px;
+				margin: 50px auto;
+				padding: 20px;
+				border: 1px solid #ced4da;
+				border-radius: 5px;
+				background-color: #fff;
+			}
+			label {
+				font-weight: bold;
+				margin-bottom: 5px;
+			}
+			input {
+				margin-bottom: 10px;
+			}
+	
+			.container {
+				margin: 0 auto;
+				max-width: 800px;
+				padding: 20px;
+				text-align: center;
+			}
+	
+			.button {
+				background-color: #4CAF50;
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 10px;
+				cursor: pointer;
+			}
+      #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+      #customers tr:hover {background-color: #ddd;}
+      
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #436283;
+        color: white;
+      }
+			
+      </style>
+      </head>
+   <body> <div> 
+       <h1>Muskan Jain</h1> 
+         <h1>1002033280</h1> 
+      </div> 
+         <br>
+      <div>
+         <a href="/">Home</a>
+      </div>   
+   <br> <br>
+      <br> <br>
+      <div>
+      <table id='customers'>
+         <tr>
+            <td><b>Name</b></td>
+            <td><b>State</b></td>
+            <td><b>Salary</b></td>
+            <td><b>Grade</b></td>
+            <td><b>Room</b></td>
+            <td><b>Telnum</b></td>
+            <td><b>Image Name</b></td> 
+            <td><b>Image</b></td> 
+            <td><b>Keywords</b></td> 
+         </tr>
+         {% for col in rows %}
+         <tr>
+            <td>{{col[0]}}</td>
+            <td>{{col[1]}}</td>
+            <td> {{ col[2]}}</td>
+            <td>{{col[3]}}</td>
+            <td> {{col[4]}}</td>
+            <td>{{col[5]}}</td>
+            <td>{{col[6]}}</td>
+            <td><img style="height: 150px"  src="static/{{col[6]}}" alt="No Image Found"></td> 
+            <td>{{col[7]}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+</div>
+      <br>
+     
+   </body>
+</html>
